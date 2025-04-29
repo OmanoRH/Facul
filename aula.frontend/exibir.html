@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exibir via URL</title>
+  <script>
+    function pegarDadosDaURL() {
+      const params = new URLSearchParams(window.location.search);
+
+      const nome = params.get("nome") || "Não informado";
+      const email = params.get("Email") || "Não informado";
+      const senha = params.get("senha") || "Não informada";
+      const idade = params.get("idade") || "Não informada";
+      const videogame = params.get("videogame") || "Não informado";
+      const aceito = params.get("aceito") || "Não aceito";
+      const noticias = params.get("noticias") || "Não desejo receber novidades no meu Email.";
+
+      document.getElementById("nomeExibido").innerText = nome;
+      document.getElementById("emailExibido").innerText = email;
+      document.getElementById("senhaExibido").innerText = senha;
+      document.getElementById("idadeExibido").innerText = idade;
+      document.getElementById("videogameExibido").innerText = videogame;
+      document.getElementById("aceitoExibido").innerText = aceito;
+      document.getElementById("noticiasExibido").innerText = noticias;
+
+    }
+  </script>
+</head>
+<body onload="pegarDadosDaURL()">
+  <h1>Dados Recebidos pela URL</h1>
+  <p><strong>Nome:</strong> <span id="nomeExibido"></span></p>
+  <p><strong>Email:</strong> <span id="emailExibido"></span></p>
+  <p><strong>Senha:</strong> <span id="senhaExibido"></span></p>
+  <p><strong>Idade:</strong> <span id="idadeExibido"></span></p>
+  <p><strong>Videogame:</strong> <span id="videogameExibido"></span></p>
+  <p><strong>Termos de Servico:</strong> <span id="aceitoExibido"></span></p>
+  <p><strong>Noiticias no Email:</strong> <span id="noticiasExibido"></span></p>
+
+  <a href="index.html">Voltar</a>
+</body>
+</html>
