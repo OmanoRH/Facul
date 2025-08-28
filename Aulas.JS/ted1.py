@@ -1,6 +1,6 @@
 pessoas = []
 
-for i in range(1, 5):
+for i in range(1, 16):
     print(f"\ninforme a altura e o genero da pessoa {i}!")
     altura = float(input("altura: "))
     genero = input("genero (M/F): ").upper()
